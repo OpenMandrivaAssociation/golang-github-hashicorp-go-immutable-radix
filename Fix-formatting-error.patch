@@ -1,0 +1,25 @@
+From b66e05a96a734bd0b556f1b2e198254f0ca13706 Mon Sep 17 00:00:00 2001
+From: Jan Chaloupka <jchaloup@redhat.com>
+Date: Tue, 12 Jun 2018 10:04:57 +0200
+Subject: [PATCH] Fix formatting error
+
+---
+ iradix_test.go | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/iradix_test.go b/iradix_test.go
+index 93d5d62..7b0bc0a 100644
+--- a/iradix_test.go
++++ b/iradix_test.go
+@@ -129,7 +129,7 @@ func TestRoot(t *testing.T) {
+ 	}
+ 	val, ok := r.Get(nil)
+ 	if !ok || val != true {
+-		t.Fatalf("bad: %v %#v", val)
++		t.Fatalf("bad: %v %#v", val, val)
+ 	}
+ 	r, val, ok = r.Delete(nil)
+ 	if !ok || val != true {
+-- 
+2.7.5
+
